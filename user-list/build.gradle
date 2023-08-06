@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.navigation'
+    namespace 'com.example.user-list'
     compileSdk 33
 
     defaultConfig {
@@ -31,6 +31,5 @@ android {
 }
 
 dependencies {
-    implementation project(":user-list:api")
-    implementation project(":user-detail:api")
+    implementation project(":core")
 }

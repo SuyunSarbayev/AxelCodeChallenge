@@ -43,7 +43,7 @@ dependencies {
     implementation project(":core")
     implementation project(":user-detail:api")
     implementation project(":core:features-api")
-    implementation project(":feature:api")
+    implementation project(":user-list:api")
     implementation project(":core:ui")
 
     testImplementation project.mockito.values()
