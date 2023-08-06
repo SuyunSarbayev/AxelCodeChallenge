@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="users_list_search_empty_title">No users found</string>
+    <string name="users_list_search_empty_subtitle">Sorry we can not find users that matching your request</string>
+    <string name="users_list_search_reload_page">Reload page</string>
+    <string name="users_list_search_query_hint">Enter search query</string>
+    <string name="users_list_dialog_open_detail">Open</string>
+    <string name="users_list_dialog_close_detail">Close</string>
+    <string name="users_list_dialog_title">Open detailed information of user: %s?</string>
+</resources>
