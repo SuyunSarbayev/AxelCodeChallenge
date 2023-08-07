@@ -9,6 +9,11 @@ import androidx.navigation.navArgument
 import com.example.api.UserDetailFeatureApi
 import com.example.impl.ui.UserDetailScreen
 
+/**
+ * Feature module entry point declaration, registerGraph implementation from extension
+ * function declared in featureApi module, which add composable route with navArgument username
+ * to pass login param for detail request
+ */
 class UserDetailFeatureImpl : UserDetailFeatureApi {
     override fun registerGraph(
         navHostController: NavHostController,

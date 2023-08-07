@@ -6,6 +6,9 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
+/**
+ * Api service class for user list
+ */
 interface FeatureApiService {
     @GET("search/users")
     suspend fun searchUsers(

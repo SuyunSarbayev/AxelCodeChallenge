@@ -2,6 +2,9 @@ package com.example.api.data
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Data classes for user list
+ */
 data class UsersApi(
     @SerializedName("total_count") var totalCount: Int,
     @SerializedName("incomplete_results") var incompleteResults: Boolean,

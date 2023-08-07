@@ -6,6 +6,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import com.example.api.ui.FeatureApi
 
+/**
+ * User list feature entry point which contains implementation of graph registering
+ * function extension declared in feature api module, it must add composable route to the NavGraph
+ */
 class FeatureImpl : FeatureApi {
     override fun registerGraph(
         navHostController: NavHostController,

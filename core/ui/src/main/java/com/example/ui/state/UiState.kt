@@ -1,5 +1,9 @@
 package com.example.ui.state
 
+/**
+ * UiState class for request processing, Loading state for request that is in process
+ * Error in case of error occured, Success for successful results
+ */
 sealed class UiState<out T> {
     object Loading : UiState<Nothing>()
 

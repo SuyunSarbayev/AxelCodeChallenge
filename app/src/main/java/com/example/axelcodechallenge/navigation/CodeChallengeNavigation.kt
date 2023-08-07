@@ -7,6 +7,9 @@ import androidx.navigation.compose.NavHost
 import com.example.features_api.register
 import com.example.navigation.NavigationProvider
 
+/**
+ * Nav graph declaration which triggers register for every feature module
+ */
 @Composable
 fun CodeChallengeNavGraph(
     modifier: Modifier = Modifier,

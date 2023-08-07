@@ -1,6 +1,5 @@
 package com.example.network.di
 
-import com.example.network.interceptors.NetworkKeyInterceptor
 import com.example.network.util.BASE_URL
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -14,6 +13,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+/**
+ * Network module for hilt di
+ */
 @Module
 @InstallIn(SingletonComponent::class)
 class NetworkModule {
@@ -29,7 +31,7 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun providesOkHttpClient(networkKeyInterceptor: NetworkKeyInterceptor): OkHttpClient {
+    fun providesOkHttpClient(): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .build()

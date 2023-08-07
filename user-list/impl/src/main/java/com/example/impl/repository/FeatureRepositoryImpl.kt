@@ -8,6 +8,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
+/**
+ * Repository implementation
+ */
 class FeatureRepositoryImpl @Inject constructor(private val featureApiService: FeatureApiService) :
     FeatureRepository {
     override suspend fun searchUsers(query: String, page: Int): UsersApi {

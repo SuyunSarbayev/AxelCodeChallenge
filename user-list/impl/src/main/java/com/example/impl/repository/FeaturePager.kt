@@ -5,6 +5,12 @@ import androidx.paging.PagingState
 import com.example.api.data.User
 import com.example.api.repository.FeatureRepository
 
+/**
+ * Pager class which contains search query and repository
+ * contains logic to determine if next page must be retrieved once user scrolls down and
+ * load more data, if we locate that items size is less that page size we can be sure
+ * that all data is loaded, in my opinion it is better for response to have variable like hasNextPage
+ */
 class FeaturePager(
     private val searchQuery: String,
     private val featureRepository: FeatureRepository,

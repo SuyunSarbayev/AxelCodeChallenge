@@ -14,14 +14,23 @@ import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/**
+ * ViewModel for user detail provided with HiltViewModel annotation
+ */
 @HiltViewModel
 class UserDetailFeatureViewModel @Inject constructor(
     private val savedStateHandle: SavedStateHandle,
     private val featureRepository: FeatureRepository,
 ) : ViewModel() {
 
+    /**
+     * MutableState for internal usage inside class
+     */
     private val _userDetailState = MutableStateFlow<UiState<UserDetails>>(UiState.Loading)
 
+    /**
+     * Public declaration for outside usage and testing
+     */
     val userDetailState: StateFlow<UiState<UserDetails?>> = _userDetailState
 
     private val username = savedStateHandle.get<String>("username")

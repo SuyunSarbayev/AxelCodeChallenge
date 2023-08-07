@@ -23,8 +23,14 @@ class FeatureViewModel @Inject constructor(
     private val featurePagerRepository: FeaturePagerRepository,
 ) : ViewModel() {
 
+    /**
+     * Private state declaration for internal usage inside viewmodel
+     */
     private val _search = MutableStateFlow("")
 
+    /**
+     * Public declaration for outside usage and testing
+     */
     val search = _search.asStateFlow()
         .stateIn(
             scope = viewModelScope,
@@ -32,6 +38,10 @@ class FeatureViewModel @Inject constructor(
             initialValue = "",
         )
 
+    /**
+     * Pagination flow to provide data with paging format with the help of
+     * pagination3 library, debounce is needed to not trigger search after each input
+     */
     @OptIn(ExperimentalCoroutinesApi::class, FlowPreview::class)
     val usersPaging: Flow<PagingData<User>> = search
         .debounce { 800L }

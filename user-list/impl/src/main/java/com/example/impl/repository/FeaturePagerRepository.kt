@@ -8,6 +8,9 @@ import com.example.api.repository.FeatureRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
+/**
+ * Pager repository which holds constant declaration and Pager with PagingConfig
+ */
 class FeaturePagerRepository @Inject constructor(
     private val featureRepository: FeatureRepository,
 ) {

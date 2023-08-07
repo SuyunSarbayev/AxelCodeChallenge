@@ -2,6 +2,9 @@ package com.example.api.data
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * User details data class for detail page
+ */
 data class UserDetails(
 
     @SerializedName("login") var login: String? = null,
